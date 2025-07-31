@@ -54,6 +54,19 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2")
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.9.2")
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    //Corrutinas
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
+
+    //dagger hilt
+    //implementation ("com.google.dagger:hilt-android:$hilt_version")
+    //kapt ("com.google.dagger:hilt-android-compiler:$hilt_version")
+    //Room
+    //implementation("androidx.room:room-ktx:2.4.0")
+    //kapt("androidx.room:room-compiler:2.4.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

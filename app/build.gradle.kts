@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -60,15 +62,19 @@ dependencies {
     //Corrutinas
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
-
+    kapt("com.google.dagger:dagger-compiler:2.35")
     //dagger hilt
-    //implementation ("com.google.dagger:hilt-android:$hilt_version")
-    //kapt ("com.google.dagger:hilt-android-compiler:$hilt_version")
+    implementation("com.google.dagger:hilt-android:2.56.2")
+    kapt("com.google.dagger:hilt-android-compiler:2.56.2")
     //Room
     //implementation("androidx.room:room-ktx:2.4.0")
     //kapt("androidx.room:room-compiler:2.4.0")
 
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+kapt {
+    correctErrorTypes = true
 }
